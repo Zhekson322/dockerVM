@@ -1,0 +1,4 @@
+ip link add mynet-shim link enp0s3 type macvlan mode bridge
+ip addr add 192.168.31.223/32 dev mynet-shim
+ip link set mynet-shim up
+ip route add 192.168.31.192/27 dev mynet-shim

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run dockerBash script on startup
+
+[Service]
+ExecStart=/bin/bash /home/evgen/ans/dockerBash
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
