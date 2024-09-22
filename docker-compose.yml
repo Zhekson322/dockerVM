@@ -1,0 +1,44 @@
+services:
+  ubuntu_one:
+    image: myssh
+    networks:
+          - mynet
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+        reservations:
+          cpus: '0.5'
+          memory: 250M
+    container_name: ubuntu_one
+  ubuntu_two:
+    image: myssh
+    networks:
+          - mynet
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+        reservations:
+          cpus: '0.5'
+          memory: 250M
+    container_name: ubuntu_two
+
+  ubuntu_three:
+    image: myssh
+    networks:
+          - mynet
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+        reservations:
+          cpus: '0.5'
+          memory: 250M
+    container_name: ubuntu_three
+networks:
+  mynet:
+    external: true
