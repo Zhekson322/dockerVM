@@ -1,0 +1,4 @@
+ansible all -i myhosts.ini -u ubuntu -k -m command -a "ip a" #шаблон
+[cisco_routers:vars]    - указать переменные окружения для группы                                                                          │
+ansible_user=ubuntu                                                                              │
+ansible_password=1234  

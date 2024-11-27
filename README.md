@@ -5,3 +5,6 @@ docker network create -d macvlan -o parent=eno1 \
   --ip-range 192.168.1.192/27 \ #диапазон по маске 27 = 32 адреса
   --aux-address 'host=192.168.1.223' \ #фикс адреса для интерфейса
   mynet
+
+в папке docker есть что то вроде dockerbash и docker bash service, соответсвенно сам скрипт и
+сервис запуска данного скрипта.
